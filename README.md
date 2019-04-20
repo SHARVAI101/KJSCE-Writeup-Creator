@@ -64,3 +64,5 @@ Follow the steps as listed above and:
 2. If you don't want Code to be pasted, input *nocode* in cmd
 3. If you don't want Output to be pasted, input *nooutput* in cmd
 
+![cmd screenshot 2](https://github.com/SHARVAI101/KJSCE-Writeup-Creator/blob/master/assets/cmd2.PNG?raw=true)
+
