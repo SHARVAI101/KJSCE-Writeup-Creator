@@ -27,18 +27,18 @@ pip install git+https://github.com/abenassi/Google-Search-API
 In order to use the program, all you have to do is paste your writeup in the folder which contains writeup.py and all your code files in the *code* folder and all your screenshots in your *screenshots* folder.
 
 ###### folder structure
-![folder structure screenshot](https://github.com/CAS-TEAM/KJSCE-Writeup-Creator/blob/master/assets/folderstruct.jpg?raw=true)
+![folder structure screenshot](https://github.com/SHARVAI101/KJSCE-Writeup-Creator/blob/master/assets/folderstruct.jpg?raw=true)
 
 ###### code folder
-![code folder screenshot](https://github.com/CAS-TEAM/KJSCE-Writeup-Creator/blob/master/assets/codefolder.png?raw=true)
+![code folder screenshot](https://github.com/SHARVAI101/KJSCE-Writeup-Creator/blob/master/assets/codefolder.png?raw=true)
 
 ###### screenshots folder
-![screenshot folder screenshot](https://github.com/CAS-TEAM/KJSCE-Writeup-Creator/blob/master/assets/ssfolder.png?raw=true)
+![screenshot folder screenshot](https://github.com/SHARVAI101/KJSCE-Writeup-Creator/blob/master/assets/ssfolder.png?raw=true)
 
 Once that is done, open your write-up and add some text (eg. Code) wherever you want all your code to be pasted and add some other text (eg. Output) wherever you want all your screenshots to be pasted. Also, check the heading under which all the postlab questions lie(eg., Post Lab ). If there is no heading, add something such as "PostLab".
 
 ###### writeup
-![writeup screenshot](https://github.com/CAS-TEAM/KJSCE-Writeup-Creator/blob/master/assets/writeup.jpg?raw=true)
+![writeup screenshot](https://github.com/SHARVAI101/KJSCE-Writeup-Creator/blob/master/assets/writeup.jpg?raw=true)
 
 After that, run the writeup.py file in the cmd as follows:
 ```
@@ -47,12 +47,12 @@ python writeup.py
 Now, the code will ask you the name of the writeup that you want to enter. Once entered, enter the headings that you added for adding the code, output and post lab questions and press enter.
 
 ###### running code in cmd
-![cmd code screenshot](https://github.com/CAS-TEAM/KJSCE-Writeup-Creator/blob/master/assets/cmd.PNG?raw=true)
+![cmd code screenshot](https://github.com/SHARVAI101/KJSCE-Writeup-Creator/blob/master/assets/cmd.PNG?raw=true)
 
 The writeup will now be automatically created and the output will be saved in a file called *output.docx*.
 
 ###### output file
-![output screenshot](https://github.com/CAS-TEAM/KJSCE-Writeup-Creator/blob/master/assets/outputfile.jpg?raw=true)
+![output screenshot](https://github.com/SHARVAI101/KJSCE-Writeup-Creator/blob/master/assets/outputfile.jpg?raw=true)
 
 Now, if you want to create another writeup, delete the files in the *code* and *screenshots* folders and add the new code and screenshots and run the writeup.py script as shown before.
 
