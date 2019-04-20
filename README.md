@@ -49,5 +49,3 @@ Follow the steps as listed above and:
 <h3>Developed by:</h3>
 
 - Sharvai Patil
-=======
-# KJSCE-Writeup-Creator
