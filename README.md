@@ -66,3 +66,8 @@ Follow the steps as listed above and:
 
 ![cmd screenshot 2](https://github.com/SHARVAI101/KJSCE-Writeup-Creator/blob/master/assets/cmd2.PNG?raw=true)
 
+<h3>Common Issues</h3>
+
+1. If you are receving any errors with regards to the installation of python-docx, [check the solution here](https://github.com/SHARVAI101/KJSCE-Writeup-Creator/issues/1)
+
+2. For issues regarding beautifulsoup installation or html5lib (error: AttributeError for *_base* in *html5lib*), [check solution here](https://github.com/SHARVAI101/KJSCE-Writeup-Creator/issues/2)
