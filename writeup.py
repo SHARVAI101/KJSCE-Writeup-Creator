@@ -77,8 +77,11 @@ def getPostLabQ():
 
 				# now we will query the string on google
 				datastring=searchGoogle(querystring)
-				para.add_run('\nAns.: '+str(datastring))
-				# print(datastring)
+				if datastring != False:
+					para.add_run('\nAns.: '+str(datastring))
+					# print(datastring)
+				else:
+					print("An answer to the query was not found in the first ten Google links")
 
 	document.save("output.docx")
 	print('\n\n~~~ Write Up has been created and saved in the output.docx file ~~~')
@@ -87,11 +90,13 @@ def searchGoogle(querystring):
 	# to do -> handle exceptions, re-query on google if there is an exception by going to the next link and same for pdf and ppt
 	num_page=1
 	linkno=0
-	while(True):
+	# while(True):
+	for i in range(10):
 		# infinite loop to search for the answer for querystring until it is found
+		# loop that tries ten times to search for an answer for the querystring
 		try:
 			print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-			print("QUERY --> "+str(querystring))
+			print("Question --> "+str(querystring))
 			# print(querystring)
 			
 			searchresult=google.search(querystring,num_page)
@@ -133,5 +138,8 @@ def searchGoogle(querystring):
 				# if number of links on one page have been exceede, go to the next google link page
 				num_page+=1
 				linkno=0
+
+
+	return False
 
 getPostLabQ()
