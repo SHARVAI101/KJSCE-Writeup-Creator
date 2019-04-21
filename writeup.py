@@ -13,6 +13,8 @@ from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
 from sumy.summarizers.luhn import LuhnSummarizer
 
+import time
+
 print('\n\n~~~~~~~~~~~~~~~~~~~~~~~ THE KJSCE WRITE-UP CREATOR ~~~~~~~~~~~~~~~~~~~~~~~')
 print('~~~~~~~~~~~~~~~~~~~~~~~ Created By: Sharvai Patil ~~~~~~~~~~~~~~~~~~~~~~~')
 
@@ -138,6 +140,8 @@ def searchGoogle(querystring):
 				# if number of links on one page have been exceede, go to the next google link page
 				num_page+=1
 				linkno=0
+
+		time.sleep(1) #sleep for 10 miliseconds so that Google doesn't throw 503 error
 
 
 	return False
