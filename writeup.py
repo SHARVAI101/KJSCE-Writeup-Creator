@@ -2,6 +2,7 @@ from docx import Document
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.shared import Pt
 from google import google
+import urllib
 import urllib.request
 import nltk
 from nltk.corpus import stopwords
@@ -14,6 +15,10 @@ from sumy.nlp.tokenizers import Tokenizer
 from sumy.summarizers.luhn import LuhnSummarizer
 
 import time
+
+import requests
+from fake_useragent import UserAgent
+from bs4 import BeautifulSoup
 
 print('\n\n~~~~~~~~~~~~~~~~~~~~~~~ THE KJSCE WRITE-UP CREATOR ~~~~~~~~~~~~~~~~~~~~~~~')
 print('~~~~~~~~~~~~~~~~~~~~~~~ Created By: Sharvai Patil ~~~~~~~~~~~~~~~~~~~~~~~')
@@ -93,7 +98,57 @@ def searchGoogle(querystring):
 	num_page=1
 	linkno=0
 	# while(True):
-	for i in range(10):
+
+	query = "'"+querystring+"'"
+	query = urllib.parse.quote_plus(query) # Format into URL encoding
+	number_result = 20
+
+	ua = UserAgent()
+
+	google_url = "https://www.google.com/search?q=" + query + "&num=" + str(number_result)
+	response = requests.get(google_url, {"User-Agent": ua.random})
+	soup = BeautifulSoup(response.text, "html.parser")
+
+	result_div = soup.find_all('div', attrs = {'class': 'g'})
+
+	links = []
+	titles = []
+	descriptions = []
+	for r in result_div:
+		# Checks if each element is present, else, raise exception
+		try:
+			link = r.find('a', href = True)
+			title = r.find('h3', attrs={'class': 'r'}).get_text()
+			description = r.find('span', attrs={'class': 'st'}).get_text()
+			
+			# Check to make sure everything is present before appending
+			if link != '' and title != '' and description != '': 
+				links.append(link['href'])
+				titles.append(title)
+				descriptions.append(description)
+		# Next loop if one element is not present
+		except:
+			continue
+
+	to_remove = []
+	clean_links = []
+	for i, l in enumerate(links):
+		clean = re.search('\/url\?q\=(.*)\&sa',l)
+
+		# Anything that doesn't fit the above pattern will be removed
+		if clean is None:
+			to_remove.append(i)
+			continue
+		clean_links.append(clean.group(1))
+
+	# Remove the corresponding titles & descriptions
+	for x in to_remove:
+		del titles[x]
+		del descriptions[x]
+
+	print(clean_links)
+
+	for i in range(len(clean_links)):
 		# infinite loop to search for the answer for querystring until it is found
 		# loop that tries ten times to search for an answer for the querystring
 		try:
@@ -101,9 +156,10 @@ def searchGoogle(querystring):
 			print("Question --> "+str(querystring))
 			# print(querystring)
 			
-			searchresult=google.search(querystring,num_page)
+			# searchresult=google.search(querystring,num_page)
 
-			searchlink=searchresult[linkno].link # this is the first link of the google search results...we will always go to the first link
+			# searchlink=searchresult[linkno].link # this is the first link of the google search results...we will always go to the first link
+			searchlink=clean_links[i]
 			print("Search Link --> "+str(searchlink))
 
 			if searchlink[-4:]=='.pdf' or searchlink[-4:]=='.ppt':
