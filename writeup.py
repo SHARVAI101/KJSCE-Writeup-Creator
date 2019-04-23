@@ -146,7 +146,7 @@ def searchGoogle(querystring):
 		del titles[x]
 		del descriptions[x]
 
-	print(clean_links)
+	# print(clean_links)
 
 	for i in range(len(clean_links)):
 		# infinite loop to search for the answer for querystring until it is found
