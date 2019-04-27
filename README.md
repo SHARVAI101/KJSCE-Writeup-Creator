@@ -26,8 +26,9 @@ Run the following command in your git bash:
 pip install git+https://github.com/abenassi/Google-Search-API
 ```
 After that, type `python` and press Enter. Now enter the command `import nltk` followed by `nltk.download('punkt')` and `nltk.download('stopwords')`. This is shown below:
-![cmd3 code screenshot](https://github.com/SHARVAI101/KJSCE-Writeup-Creator/blob/master/assets/cmd3.PNG?raw=true)
-![cmd4 code screenshot](https://github.com/SHARVAI101/KJSCE-Writeup-Creator/blob/master/assets/cmd4.PNG?raw=true)
+![cmd3 code screenshot](https://github.com/SHARVAI101/KJSCE-Writeup-Creator/blob/master/assets/cmd3.png?raw=true)
+
+![cmd4 code screenshot](https://github.com/SHARVAI101/KJSCE-Writeup-Creator/blob/master/assets/cmd4.png?raw=true)
 
 <h2>How to use:</h2>
 
