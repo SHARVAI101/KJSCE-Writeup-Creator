@@ -10,6 +10,10 @@ First, clone this repository onto your computer and run the following command in
 ```
 pip install -r requirements.txt
 ```
+After that, type `python` and press Enter. Now enter the command `import nltk` followed by `nltk.download('punkt')` and `nltk.download('stopwords')`. This is shown below:
+![cmd3 code screenshot](https://github.com/SHARVAI101/KJSCE-Writeup-Creator/blob/master/assets/cmd3.PNG?raw=true)
+![cmd4 code screenshot](https://github.com/SHARVAI101/KJSCE-Writeup-Creator/blob/master/assets/cmd4.PNG?raw=true)
+
 Or, you could also manually install all dependencies as follows:
 
 Run the following commands in your cmd:
@@ -21,6 +25,9 @@ Run the following command in your git bash:
 ```
 pip install git+https://github.com/abenassi/Google-Search-API
 ```
+After that, type `python` and press Enter. Now enter the command `import nltk` followed by `nltk.download('punkt')` and `nltk.download('stopwords')`. This is shown below:
+![cmd3 code screenshot](https://github.com/SHARVAI101/KJSCE-Writeup-Creator/blob/master/assets/cmd3.PNG?raw=true)
+![cmd4 code screenshot](https://github.com/SHARVAI101/KJSCE-Writeup-Creator/blob/master/assets/cmd4.PNG?raw=true)
 
 <h2>How to use:</h2>
 
